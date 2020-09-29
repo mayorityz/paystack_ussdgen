@@ -4,14 +4,15 @@
   "description": "app to use ussd for trans",
   "main": "app.js",
   "author": "mayowa abiodun",
-  "license": "mit",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "paystack-api": "^2.0.5",
-    "shortid": "^2.2.15"
+    "shortid": "^2.2.15",
+    "twilio": "^3.49.4"
   },
   "engines": {
     "node": "12.14.1",

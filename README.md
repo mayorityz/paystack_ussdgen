@@ -11,4 +11,6 @@ Both are POST
 
 ##### note,
 
-The webservice url on the paystack dashboard as to be adjusted as in the webservice route.
+- The webservice url on the paystack dashboard as to be adjusted as in the webservice route.
+
+- demo url - https://ussd-test-appz.herokuapp.com/

@@ -24,6 +24,7 @@ app.use(bodyParser.json());
  */
 app.post("/paywithussd", async (req, res, next) => {
   const { email, amount, type } = req.body;
+  console.log(req.body);
   let finalResponse;
   try {
     const charge = await paystack.charge.charge({
@@ -32,6 +33,7 @@ app.post("/paywithussd", async (req, res, next) => {
       ussd: { type },
       reference: sid.generate(),
     });
+    console.log(charge);
     if (charge.status) {
       const { message, data } = charge;
       const { status, reference, display_text, ussd_code } = data;

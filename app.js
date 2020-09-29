@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3500;
 
 const paystack = require("paystack-api")(process.env.paystack_skey);
-
+const cors = require("cors");
 const crypto = require("crypto");
 
 app.use(cors());
@@ -31,7 +31,6 @@ app.use((req, res, next) => {
  */
 app.post("/paywithussd", async (req, res, next) => {
   const { email, amount, type } = req.body;
-  console.log(req.body);
   let finalResponse;
   try {
     const charge = await paystack.charge.charge({

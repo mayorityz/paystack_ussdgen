@@ -10,12 +10,19 @@ const paystack = require("paystack-api")(process.env.paystack_skey);
 
 const crypto = require("crypto");
 
+app.use(cors());
 app.use(bodyParser.json());
-
+app.use(express.urlencoded({ extended: false }));
 /**
  * ! todo
  *  add protective layer for urls access
  */
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "*");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
 
 /**
  * pay with ussd

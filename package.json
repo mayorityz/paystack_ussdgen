@@ -1,0 +1,19 @@
+{
+  "name": "ussd-app",
+  "version": "1.0.0",
+  "description": "app to use ussd for trans",
+  "main": "app.js",
+  "author": "mayowa abiodun",
+  "license": "mit",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "paystack-api": "^2.0.5",
+    "shortid": "^2.2.15"
+  },
+  "engines": {
+    "node": "12.14.1",
+    "yarn": "1.22.4"
+  }
+}
